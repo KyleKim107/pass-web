@@ -1,7 +1,7 @@
 package com.fitness.pass.passweb.service.statistics;
 
-import com.fastcampus.pass.repository.statistics.StatisticsRepository;
-import com.fastcampus.pass.util.LocalDateTimeUtils;
+import com.fitness.pass.passweb.repository.statistics.StatisticsRepository;
+import com.fitness.pass.passweb.util.LocalDateTimeUtils;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;

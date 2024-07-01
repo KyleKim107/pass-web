@@ -1,6 +1,6 @@
 package com.fitness.pass.passweb.service.user;
 
-import com.fastcampus.pass.repository.user.UserEntity;
+import com.fitness.pass.passweb.repository.user.UserEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 import org.mapstruct.factory.Mappers;

@@ -1,10 +1,10 @@
 package com.fitness.pass.passweb.controller.admin;
 
-import com.fastcampus.pass.service.packaze.PackageService;
-import com.fastcampus.pass.service.pass.BulkPassService;
-import com.fastcampus.pass.service.statistics.StatisticsService;
-import com.fastcampus.pass.service.user.UserGroupMappingService;
-import com.fastcampus.pass.util.LocalDateTimeUtils;
+import com.fitness.pass.passweb.service.packaze.PackageService;
+import com.fitness.pass.passweb.service.pass.BulkPassService;
+import com.fitness.pass.passweb.service.statistics.StatisticsService;
+import com.fitness.pass.passweb.service.user.UserGroupMappingService;
+import com.fitness.pass.passweb.util.LocalDateTimeUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

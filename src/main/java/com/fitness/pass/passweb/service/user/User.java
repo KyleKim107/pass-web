@@ -1,6 +1,6 @@
 package com.fitness.pass.passweb.service.user;
 
-import com.fastcampus.pass.repository.user.UserStatus;
+import com.fitness.pass.passweb.repository.user.UserStatus;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

@@ -1,7 +1,7 @@
 package com.fitness.pass.passweb.service.user;
 
-import com.fastcampus.pass.repository.user.UserEntity;
-import com.fastcampus.pass.repository.user.UserRepository;
+import com.fitness.pass.passweb.repository.user.UserEntity;
+import com.fitness.pass.passweb.repository.user.UserRepository;
 import org.springframework.stereotype.Service;
 
 @Service

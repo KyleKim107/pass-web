@@ -1,6 +1,6 @@
 package com.fitness.pass.passweb.service.user;
 
-import com.fastcampus.pass.repository.user.UserGroupMappingRepository;
+import com.fitness.pass.passweb.repository.user.UserGroupMappingRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
