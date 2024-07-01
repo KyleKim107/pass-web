@@ -28,7 +28,7 @@ public class AdminViewController {
     @GetMapping
     public ModelAndView home(ModelAndView modelAndView, @RequestParam("to") String toString) {
         LocalDateTime to = LocalDateTimeUtils.parseDate(toString);
-
+        // input front-end variable so that template/admin/index.html can use it
         modelAndView.addObject("chartData", statisticsService.makeChartData(to));
         modelAndView.setViewName("admin/index");
         return modelAndView;
