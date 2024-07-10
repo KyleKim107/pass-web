@@ -38,7 +38,7 @@ var myLineChart = new Chart(ctx, {
     data: {
         labels: chartData.labels,
         datasets: [{
-            label: "출석 횟수",
+            label: "Attendance",
             lineTension: 0.3,
             backgroundColor: "rgba(78, 115, 223, 0.05)",
             borderColor: "rgba(78, 115, 223, 1)",
@@ -52,7 +52,7 @@ var myLineChart = new Chart(ctx, {
             pointBorderWidth: 2,
             data: chartData.attendedCounts,
         }, {
-            label: "취소 횟수",
+            label: "Cancelled",
             lineTension: 0.3,
             backgroundColor: "rgba(231, 74, 59, 0.05)",
             borderColor: "rgba(231, 74, 59, 1)",

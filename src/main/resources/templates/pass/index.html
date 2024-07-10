@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -21,15 +21,15 @@
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand" href="#page-top">PT 이용권 관리</a>
+        <a class="navbar-brand" href="#page-top">PT Pass Management</a>
         <button class="navbar-toggler text-uppercase font-weight-bold bg-secondary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#passes">이용권</a></li>
-                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#class">수업</a></li>
-                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#notice">공지사항</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#passes">Passes</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#class">Classes</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#notice">Notices</a></li>
             </ul>
         </div>
     </div>
@@ -38,7 +38,7 @@
 <header class="masthead bg-secondary text-white text-center">
     <div class="container d-flex align-items-center flex-column">
         <img class="masthead-avatar mb-3" src="/pass/assets/img/profile.png" alt="..." />
-        <p class="masthead-subheading font-weight-light mb-3" th:text="${user.getUserName()} + ' 회원님 안녕하세요 ✋'"/>
+        <p class="masthead-subheading font-weight-light mb-3" th:text="${user.getUserName()} + ' Welcome ✋'"></p>
     </div>
 </header>
 <!-- Passes-->
@@ -53,18 +53,17 @@
                             <span th:text="${#temporals.format(pass.getStartedAt(), 'yyyy-MM-dd HH:mm')}"/> ~
                             <span th:text="${#temporals.format(pass.getEndedAt(), 'yyyy-MM-dd HH:mm')}"/>
                         </p>
-                        <p class="mb-0" th:if="${pass.getRemainingCount() == null}">무제한</p>
-                        <p class="mb-0" th:if="${pass.getRemainingCount() != null}">남은 횟수 <span class="fw-bold" th:text="${pass.getRemainingCount()} + '회'"></span></p>
-                        <p class="mb-0 fs-7 text-end" th:if="${pass.getStatus().name() == 'READY'}">시작 전</p>
-                        <p class="mb-0 fs-7 text-end" th:if="${pass.getStatus().name() == 'PROGRESSED'}">진행 중</p>
-                        <p class="mb-0 fs-7 text-end" th:if="${pass.getStatus().name() == 'EXPIRED'}">만료</p>
+                        <p class="mb-0" th:if="${pass.getRemainingCount() == null}">Unlimited</p>
+                        <p class="mb-0" th:if="${pass.getRemainingCount() != null}">Remaining Count <span class="fw-bold" th:text="${pass.getRemainingCount()} + ' times'"></span></p>
+                        <p class="mb-0 fs-7 text-end" th:if="${pass.getStatus().name() == 'READY'}">Not Started</p>
+                        <p class="mb-0 fs-7 text-end" th:if="${pass.getStatus().name() == 'PROGRESSED'}">In Progress</p>
+                        <p class="mb-0 fs-7 text-end" th:if="${pass.getStatus().name() == 'EXPIRED'}">Expired</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-</body>
 <!-- Copyright Section-->
 <div class="copyright py-4 text-center text-white">
     <div class="container"><small>Copyright &copy; PT Pass Service 2022</small></div>
